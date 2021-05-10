@@ -1,0 +1,302 @@
+<html>
+  <head>
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+	<div>
+	   <p>Publicado el 7 de Mayo de 2021 10:05 pm</p>
+	   <h2><a href="">Mi Primer Post en HTML</a></h2>
+	   <p>Por que Aprender Python, para que sirve, quienes lo usan</p>
+	</div>
+
+	<div>
+	    <p>Publicado el 8 de Mayo de 2021 7:40 am</p>
+	    <h2><a href="">Mi Segundo Post en HTML</a></h2>
+	    <p>Django framework web, la Herramienta web hecha en Python</p>
+	</div>
+   </body>
+</html>
+
+_______________________________________________________________________________________
+
+<html>
+  <head>
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+	{{ post }}
+	   <p>Publicado el 7 de Mayo de 2021 10:05 pm</p>
+	   <h2><a href="">Mi Primer Post en HTML</a></h2>
+	   <p>Por que Aprender Python, para que sirve, quienes lo usan</p>
+	 {{ post }}
+
+	{{ post }}
+	    <p>Publicado el 8 de Mayo de 2021 7:40 am</p>
+	    <h2><a href="">Mi Segundo Post en HTML</a></h2>
+	    <p>Django framework web, la Herramienta web hecha en Python</p>
+	{{ post }}
+   </body>
+</html>
+
+__________________________________________________________________________________________
+
+<html>
+  <head>
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+	{{ post }}
+	   <p>Publicado el 7 de Mayo de 2021 10:05 pm</p>
+	   <h2><a href="">Mi Primer Post en HTML</a></h2>
+	   <p>Por que Aprender Python, para que sirve, quienes lo usan</p>
+	 {{ post }}
+
+	{{ post }}
+	    <p>Publicado el 8 de Mayo de 2021 7:40 am</p>
+	    <h2><a href="">Mi Segundo Post en HTML</a></h2>
+	    <p>Django framework web, la Herramienta web hecha en Python</p>
+	{{ post }}
+   </body>
+</html>
+
+__________________________________________________________________________________
+
+<html>
+  <head>
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   {% for post in posts %}
+	<div>
+	   <p>Publicado:{{post.published_date}}</p>
+	   <h2><a href="">{{post.title}}</a></h2>
+	   <p>{{post.text|linebreaksbr }}</p>
+	</div>
+   {% endfor %}
+	
+   </body>
+</html>
+
+__________________________________________________________________________________________
+
+{% load static %}
+<html>
+  <head>
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   {% for post in posts %}
+	<div>
+	   <p>Publicado:{{post.published_date}}</p>
+	   <h2><a href="">{{post.title}}</a></h2>
+	   <p>{{post.text|linebreaksbr }}</p>
+	</div>
+   {% endfor %}
+	
+   </body>
+</html>
+
+______________________________________________________________________________________
+
+{% load static %}
+<html>
+  <head>
+     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div>
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   {% for post in posts %}
+	<div>
+	   <p>Publicado:{{post.published_date}}</p>
+	   <h2><a href="">{{post.title}}</a></h2>
+	   <p>{{post.text|linebreaksbr }}</p>
+	</div>
+   {% endfor %}
+	
+   </body>
+</html>
+
+_______________________________________________________________________
+{% load static %}
+<html>
+  <head>
+     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div class="page-header">
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   {% for post in posts %}
+	<div class="post">
+	   <p>Publicado:{{post.published_date}}</p>
+	   <h2><a href="">{{post.title}}</a></h2>
+	   <p>{{post.text|linebreaksbr }}</p>
+	</div>
+   {% endfor %}
+	
+   </body>
+</html>
+
+_______________________________________________________________________________________-
+
+{% load static %}
+<html>
+  <head>
+     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div class="page-header">
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>publicado: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+_______________________________________________________________________________
+
+{% load static %}
+<html>
+  <head>
+     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link href="//fonts.googleapis.com/css?family=Pangolin&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link href="//fonts.googleapis.com/css?family=Caveat&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div class="page-header">
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <h3>publicado: {{ post.published_date }}</h3>
+                    </div>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <h3>{{ post.text|linebreaksbr }}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+	
+   </body>
+</html>
+
+______________________________________________________________________________________
+
+{% load static %}
+<html>
+  <head>
+     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>Blog de Carlos</title>
+  </head>
+  <body>
+	<div class="page-header">
+	   <h1><a href="/">Blog de Carlos Villamar</a></h1>
+	</div>
+
+   <div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>publicado: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+ </body>
+</html>
+	
+
+___________________________________________________________________________________________
+
+    
+{% extends 'blog/base.html' %}
+
+	{% block content %}        
+	   {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>publicado: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+	{% endblock %}
+      
+
+__________________________________________________________________________________________________
+
+
