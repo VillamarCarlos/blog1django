@@ -4,7 +4,14 @@
         <title>Blog de Carlos Villamar en PythonAnywhere</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Reggae One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Pangolin&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Caveat&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Kalam&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
@@ -14,12 +21,12 @@
             <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
 
-	   <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+	   <p class="top-menu">Hola {{ user.username }} ,Bienvenido<small>(<a href="{% url 'logout' %}">Salir </a>)</small></p>
 
         {% else %}
             <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
         {% endif %}
-        <h1><a href="/">Blog de Carlos G Villamar L - PhytonAnywhere</a></h1>
+        <h1><a href="/">Blog de Carlos G Villamar L</a></h1>
     </div>
     <div class="content container">
         <div class="row">

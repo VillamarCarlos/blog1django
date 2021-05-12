@@ -1,5 +1,0 @@
-@login_required
-def 
-post_new(request):
-
-    [...]

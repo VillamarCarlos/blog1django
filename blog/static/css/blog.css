@@ -1,11 +1,11 @@
 h1 a {
-     color: #C25100;
-     font-family: 'Lobster';
+     color: #EB561B;
+     font-family: 'Reggae One';
 }
 
 h2 a {
-     color: #2FEB1B;
-     font-family: 'Pangolin';
+     color: #3C3C2F;
+     font-family: 'Kalam';
      font-size: 30pt;
 }
 
@@ -19,14 +19,14 @@ body {
 }
 
 .page-header {
-    background-color: #B4B435;
+    background-color: #E8EB1B;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #0623B8;
-    font-size: 45pt;
+    font-size: 41pt;
     text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ h1, h4 {
 }
 
 h2 {
-    font-family: 'Pangolin', cursive;
+    font-family: 'Kalam', cursive;
 }
 
 h3 {
@@ -49,15 +49,8 @@ h3 {
 
 
 .date {
-    color: #1B39EB;
+    color: #CC23C6;
 }
-
-.save {
-    float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
 
 .save {
     float: right;
@@ -68,10 +61,10 @@ h3 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #D22404;
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+    font-size: 20pt;
+    margin-right: 18px;
 }
 
 .post {
@@ -80,4 +73,10 @@ h3 {
 
 .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+.comment {
+
+    margin: 0px 0px 20px 20px;
+
 }

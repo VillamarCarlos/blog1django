@@ -300,3 +300,48 @@ ________________________________________________________________________________
 __________________________________________________________________________________________________
 
 
+
+{% extends 'blog/base.html' %}
+
+	{% block content %}        
+	   {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>Publicado el: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+	{% endblock %}
+      
+______________________________________________________
+{% extends 'blog/base.html' %}
+	{% block content %}        
+	   {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>Publicado el: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+     		    <a href="{% url 'post_detail' pk=post.pk %}">Comentarios: {{ post.comments.count }}</a>
+                </div>
+            {% endfor %}
+	{% endblock %}
+
+____________________________________________________
+
+{% extends 'blog/base.html' %}
+	{% block content %}        
+	   {% for post in posts %}
+                <div class="post">
+                    <div class="date">
+                        <p>Publicado el: {{ post.published_date }}</p>
+                    </div>
+                    <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+     		    <a href="{% url 'post_detail' pk=post.pk %}">Comentarios: {{ post.comments.count }}</a>
+                </div>
+            {% endfor %}
+	{% endblock %}
